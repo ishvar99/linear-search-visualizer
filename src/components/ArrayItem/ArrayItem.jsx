@@ -1,12 +1,24 @@
 import React from 'react';
 import './ArrayItem.css';
-const ArrayItem = ({ index, array, result }) => {
+const ArrayItem = ({ index, array, modifiedArray }) => {
+  console.log(modifiedArray);
   let className = 'array-item';
-  if (result.length > 0) {
-    if (result.includes(index)) {
+
+  if (modifiedArray.length > 0) {
+    if (
+      modifiedArray.some(
+        (e) => e.index == index && e.traversed == true && e.result == false
+      )
+    ) {
+      console.log('yes');
+      className = 'array-item traversed';
+    } else if (
+      modifiedArray.some(
+        (e) => e.index == index && e.traversed == true && e.result == true
+      )
+    ) {
+      console.log('yes');
       className = 'array-item result';
-    } else {
-      if (index < Math.max(...result)) className = 'array-item notresult';
     }
   }
   return (

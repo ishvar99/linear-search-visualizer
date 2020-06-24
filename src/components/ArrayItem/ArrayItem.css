@@ -17,7 +17,7 @@
   transform: scale(1.4, 1.4);
   background-color: orange !important;
 }
-.notresult {
+.traversed {
   color: black;
   transition: background 1s ease-in-out;
   background-color: pink !important;
