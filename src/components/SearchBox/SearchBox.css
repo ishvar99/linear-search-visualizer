@@ -1,5 +1,28 @@
-.search {
-  height: 200px;
-  width: 50px;
+.search-box {
+  display: flex;
+}
+
+.search-bar {
+  width: 30vw;
+  border-radius: 20px 0 0 20px;
+  outline: none;
+  font-size: 20px;
   background-color: white;
+  padding: 25px;
+  margin-top: 50px;
+  border: none;
+  min-width: 250px;
+  position: relative;
+}
+#search-button {
+  margin-top: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  background-color: white;
+  color: grey;
+  padding: 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 0 20px 20px 0;
 }

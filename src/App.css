@@ -13,8 +13,10 @@ body {
 
 .App {
   display: flex;
+  height: 500px;
   justify-content: center;
   align-items: center;
   color: white;
+  flex-direction: column;
   background: none;
 }
