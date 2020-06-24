@@ -8,7 +8,14 @@
 
 .array-item p {
   text-align: center;
+  font-weight: bold;
 }
 .result {
+  color: black;
   background-color: orange !important;
+}
+
+.notresult {
+  color: black;
+  background-color: pink !important;
 }
