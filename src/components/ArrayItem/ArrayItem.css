@@ -10,12 +10,15 @@
   text-align: center;
   font-weight: bold;
 }
+
 .result {
   color: black;
+  transition: transform 1s ease-out;
+  transform: scale(1.4, 1.4);
   background-color: orange !important;
 }
-
 .notresult {
   color: black;
+  transition: background 1s ease-in-out;
   background-color: pink !important;
 }

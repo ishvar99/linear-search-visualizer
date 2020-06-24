@@ -5,9 +5,9 @@ import Array from './components/Array/Array';
 import LinearSearch from './LinearSearchAlgorithm/LinearSearch';
 function App() {
   const [array, setArray] = useState([100, 67, 34, 55, 78, 89, 43, 90]);
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState([]);
   const findElement = (val) => {
-    setResult(LinearSearch(val, array));
+    setResult([...result, LinearSearch(val, array)]);
   };
   return (
     <div className='App'>
