@@ -11,9 +11,11 @@
   padding: 25px;
   border: none;
   min-width: 250px;
+  margin-bottom: 100px;
   position: relative;
 }
 #search-button {
+  margin-bottom: 100px;
   text-decoration: none;
   cursor: pointer;
   outline: none;

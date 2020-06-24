@@ -13,8 +13,8 @@ body {
 
 .App {
   display: flex;
-  height: 85vh;
-  margin: 50px auto;
+  /* height: 500px; */
+  margin: 10px auto;
   width: 50vw;
   justify-content: space-around;
   align-items: center;
@@ -26,4 +26,5 @@ body {
 .header {
   text-align: center;
   font-size: 64px;
+  margin-bottom: 150px;
 }

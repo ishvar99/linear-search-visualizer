@@ -1,13 +1,13 @@
 import React from 'react';
 import './ArrayItem.css';
 const ArrayItem = ({ item, result }) => {
-  let className = '';
+  let className = 'array-item';
   if (item == result) {
-    className = 'result';
+    className += ' result';
   }
   return (
-    <div className='array-item'>
-      <p className={className}>{item}</p>
+    <div className={className}>
+      <p>{item}</p>
     </div>
   );
 };
