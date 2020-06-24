@@ -1,0 +1,11 @@
+.array-item {
+  height: 100px;
+  width: 80px;
+  background-color: #333333;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.array-item p {
+  text-align: center;
+}

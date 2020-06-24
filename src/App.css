@@ -13,10 +13,17 @@ body {
 
 .App {
   display: flex;
-  height: 500px;
-  justify-content: center;
+  height: 85vh;
+  margin: 50px auto;
+  width: 50vw;
+  justify-content: space-around;
   align-items: center;
   color: white;
   flex-direction: column;
   background: none;
+}
+
+.header {
+  text-align: center;
+  font-size: 64px;
 }
