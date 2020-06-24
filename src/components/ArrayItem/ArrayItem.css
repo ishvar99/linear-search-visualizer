@@ -9,3 +9,6 @@
 .array-item p {
   text-align: center;
 }
+.result {
+  background-color: orange !important;
+}

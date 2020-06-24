@@ -1,12 +1,12 @@
 import React from 'react';
 import ArrayItem from '../ArrayItem/ArrayItem';
 import './Array.css';
-const Array = ({ array }) => {
+const Array = ({ array, result }) => {
   return (
     <div className='array-container'>
-      {array.map((item, i) => (
-        <ArrayItem key={i} item={item} />
-      ))}
+      {array.map((item, i) => {
+        return <ArrayItem key={i} item={item} result={result} />;
+      })}
     </div>
   );
 };
