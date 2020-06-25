@@ -11,14 +11,16 @@
   font-weight: bold;
 }
 
-.result {
-  color: black;
+.scale {
   transition: transform 1s ease-out;
   transform: scale(1.4, 1.4);
-  background-color: orange !important;
+}
+.result {
+  color: black;
+  background-color: orange;
 }
 .traversed {
   color: black;
   transition: background 1s ease-in-out;
-  background-color: pink !important;
+  background-color: pink;
 }

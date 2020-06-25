@@ -1,7 +1,6 @@
 import React from 'react';
 import './ArrayItem.css';
 const ArrayItem = ({ index, array, modifiedArray }) => {
-  console.log(modifiedArray);
   let className = 'array-item';
 
   if (modifiedArray.length > 0) {
@@ -10,15 +9,13 @@ const ArrayItem = ({ index, array, modifiedArray }) => {
         (e) => e.index == index && e.traversed == true && e.result == false
       )
     ) {
-      console.log('yes');
-      className = 'array-item traversed';
+      className += ' traversed';
     } else if (
       modifiedArray.some(
         (e) => e.index == index && e.traversed == true && e.result == true
       )
     ) {
-      console.log('yes');
-      className = 'array-item result';
+      className += ' result scale';
     }
   }
   return (

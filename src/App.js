@@ -7,7 +7,7 @@ function App() {
   const [array, setArray] = useState([100, 67, 34, 55, 78, 89, 43, 90]);
   const [searchElements, setSearchElements] = useState([]);
   const findElement = (val) => {
-    setSearchElements([...searchElements, ...LinearSearch(val, array)]);
+    setSearchElements(...searchElements, [...LinearSearch(val, array)]);
   };
   return (
     <div className='App'>
