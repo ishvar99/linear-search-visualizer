@@ -35,12 +35,10 @@ const ArrayItem = ({
         }
         if (index === resultIndex) {
           updateLoadingStatus(
-            resultIndex === -1
-              ? 'Element not found!'
-              : `Element found at index ${resultIndex}`
+            `${array[resultIndex]} found at index ${resultIndex}`
           );
-        } else {
-          updateLoadingStatus('loading...');
+        } else if (index === array.length - 1 && resultIndex === -1) {
+          updateLoadingStatus(`Element not found!`);
         }
       }
     }, 700 * index);

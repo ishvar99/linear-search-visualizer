@@ -22,7 +22,10 @@ function App() {
   return (
     <div className='App'>
       <p className='header'>Linear Search Visualizer</p>
-      <SearchBox search={findElement} />
+      <SearchBox
+        search={findElement}
+        updateLoadingStatus={updateLoadingStatus}
+      />
       <span>{searchStatus}</span>
       <Array
         array={array}

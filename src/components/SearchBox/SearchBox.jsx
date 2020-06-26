@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './SearchBox.css';
-const SearchBox = ({ search }) => {
+const SearchBox = ({ search, updateLoadingStatus }) => {
   const [value, setValue] = useState('');
   const searchElement = () => {
     if (value.trim() !== '') {
+      updateLoadingStatus('loading...');
       search(parseInt(value));
     }
   };
