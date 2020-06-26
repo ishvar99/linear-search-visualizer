@@ -25,14 +25,13 @@ const ArrayItem = ({ index, array, modifiedArray }) => {
               e.index === index && e.traversed === false && e.result === true
           )
         ) {
-          console.log(className, index);
           setClassName(['array-item', 'scale', 'result']);
         }
       }
-    }, 500 * index);
+    }, 700 * index);
     return () => clearTimeout(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [index, modifiedArray]);
+  }, [modifiedArray]);
   return (
     <div className={ClassNames([...new Set(className)])}>
       <p>{array[index]}</p>
