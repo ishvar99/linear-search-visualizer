@@ -4,7 +4,7 @@ const SearchBox = ({ search }) => {
   const [value, setValue] = useState('');
   const searchElement = () => {
     if (value.trim() !== '') {
-      search(value);
+      search(parseInt(value));
     }
   };
   return (
