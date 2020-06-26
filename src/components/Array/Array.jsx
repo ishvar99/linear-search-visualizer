@@ -17,15 +17,11 @@ const Array = ({ array, searchElements, updateLoadingStatus }) => {
             index={i}
             array={array}
             modifiedArray={searchElements}
+            updateLoadingStatus={updateLoadingStatus}
+            resultIndex={resultIndex}
           />
         );
       })}
-      {updateLoadingStatus(
-        resultIndex &&
-          (resultIndex === -1
-            ? 'Element not found!'
-            : `Element found at index ${resultIndex}`)
-      )}
     </div>
   );
 };

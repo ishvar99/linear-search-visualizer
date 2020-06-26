@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './ArrayItem.css';
 import ClassNames from 'classnames';
-const ArrayItem = ({ index, array, modifiedArray }) => {
+const ArrayItem = ({
+  index,
+  array,
+  modifiedArray,
+  updateLoadingStatus,
+  resultIndex,
+}) => {
   const [className, setClassName] = useState(['array-item']);
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -27,11 +33,21 @@ const ArrayItem = ({ index, array, modifiedArray }) => {
         ) {
           setClassName(['array-item', 'scale', 'result']);
         }
+        if (index === resultIndex) {
+          updateLoadingStatus(
+            resultIndex === -1
+              ? 'Element not found!'
+              : `Element found at index ${resultIndex}`
+          );
+        } else {
+          updateLoadingStatus('loading...');
+        }
       }
     }, 700 * index);
     return () => clearTimeout(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [modifiedArray]);
+
   return (
     <div className={ClassNames([...new Set(className)])}>
       <p>{array[index]}</p>

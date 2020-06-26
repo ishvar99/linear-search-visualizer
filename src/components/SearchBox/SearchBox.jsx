@@ -12,7 +12,7 @@ const SearchBox = ({ search }) => {
       <input
         onChange={(event) => setValue(event.target.value)}
         className='search-bar'
-        type='text'
+        type='number'
         placeholder='Search a number'
       />
       <button
