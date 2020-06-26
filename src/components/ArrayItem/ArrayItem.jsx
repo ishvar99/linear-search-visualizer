@@ -9,7 +9,7 @@ const ArrayItem = ({ index, array, modifiedArray }) => {
         if (
           modifiedArray.some((e) => e.index === index && e.traversed === true)
         ) {
-          setClassName([...className, 'traversed']);
+          setClassName(['array-item', 'traversed']);
         }
         if (
           modifiedArray.some(
@@ -17,7 +17,7 @@ const ArrayItem = ({ index, array, modifiedArray }) => {
               e.index === index && e.traversed === true && e.result === true
           )
         ) {
-          setClassName([...className, 'scale']);
+          setClassName(['array-item', 'traversed', 'scale']);
         }
         if (
           modifiedArray.some(
@@ -25,8 +25,8 @@ const ArrayItem = ({ index, array, modifiedArray }) => {
               e.index === index && e.traversed === false && e.result === true
           )
         ) {
-          console.log('result', index);
-          setClassName([...className, 'scale', 'result']);
+          console.log(className, index);
+          setClassName(['array-item', 'scale', 'result']);
         }
       }
     }, 500 * index);
