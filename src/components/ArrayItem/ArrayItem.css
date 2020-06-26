@@ -1,26 +1,41 @@
 .array-item {
   height: 100px;
   width: 80px;
-  background-color: #333333;
+  background-color: royalblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-radius: 5px;
-  margin: 10px;
+  margin: 25px;
 }
 
 .array-item p {
   text-align: center;
+  color: snow;
   font-weight: bold;
 }
-
+.array-item .index {
+  width: 30px;
+  height: 30px;
+  background-color: cyan;
+  border-radius: inherit;
+  color: #343a40;
+}
+.array-item .index p {
+  text-align: center;
+  margin-top: 7px;
+  color: black;
+}
 .scale {
-  transition: transform 1s ease-out;
-  transform: scale(1.2, 1.2);
+  /* transition: transform 1s ease-out; */
+  transform: scale(1.3, 1.3);
 }
 .result {
   color: black;
-  background-color: orange;
+  background-color: #28b463;
 }
 .traversed {
   color: black;
-  transition: background 1s ease-in-out;
-  background-color: pink;
+  /* transition: background 1s ease-in-out; */
+  background-color: #f16388;
 }

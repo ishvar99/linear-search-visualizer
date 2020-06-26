@@ -1,14 +1,5 @@
 body {
-  background-image: -webkit-linear-gradient(
-    to right,
-    #1a2980,
-    #26d0ce
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background-image: linear-gradient(
-    to right,
-    #1a2980,
-    #26d0ce
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: linear-gradient(to right, #000000, #434343);
 }
 
 .App {
@@ -18,9 +9,9 @@ body {
   width: 50vw;
   justify-content: space-around;
   align-items: center;
-  color: white;
   flex-direction: column;
   background: none;
+  color: snow;
 }
 
 .header {
