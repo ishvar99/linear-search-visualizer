@@ -25,6 +25,7 @@ function App() {
       <SearchBox
         search={findElement}
         updateLoadingStatus={updateLoadingStatus}
+        searchStatus={searchStatus}
       />
       <span>{searchStatus}</span>
       <Array
