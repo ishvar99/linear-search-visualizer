@@ -7,6 +7,7 @@ function App() {
   const [array, setArray] = useState([100, 67, 34, 55, 78, 89, 43, 90]);
   const [searchTerms, setSearchTerms] = useState([]);
   const [searchElements, setSearchElements] = useState([]);
+  const [searchStatus, setSearchStatus] = useState('');
   const findElement = (val) => {
     setSearchTerms([...searchTerms, val]);
     setSearchElements(
@@ -15,11 +16,19 @@ function App() {
       )
     );
   };
+  const updateLoadingStatus = (val) => {
+    setSearchStatus(val);
+  };
   return (
     <div className='App'>
       <p className='header'>Linear Search Visualizer</p>
       <SearchBox search={findElement} />
-      <Array array={array} searchElements={searchElements} />
+      <span>{searchStatus}</span>
+      <Array
+        array={array}
+        searchElements={searchElements}
+        updateLoadingStatus={updateLoadingStatus}
+      />
     </div>
   );
 }

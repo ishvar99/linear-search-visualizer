@@ -19,3 +19,7 @@ body {
   font-size: 64px;
   margin-bottom: 150px;
 }
+.App span {
+  margin-bottom: 50px;
+  font-size: 18px;
+}
