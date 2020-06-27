@@ -10,12 +10,17 @@ const ArrayItem = ({
 }) => {
   const [className, setClassName] = useState(['array-item']);
   useEffect(() => {
+    setClassName(className.filter((e) => e !== 'shake')); // to allow react to render shake effect
     const timer = setTimeout(() => {
       if (modifiedArray.length > 0) {
         if (
           modifiedArray.some((e) => e.index === index && e.traversed === true)
         ) {
-          setClassName(['array-item', 'traversed']);
+          if (resultIndex === -1 || index <= resultIndex) {
+            setClassName(['array-item', 'traversed', 'shake']);
+          } else {
+            setClassName(['array-item', 'traversed']);
+          }
         }
         if (
           modifiedArray.some(
@@ -23,7 +28,11 @@ const ArrayItem = ({
               e.index === index && e.traversed === true && e.result === true
           )
         ) {
-          setClassName(['array-item', 'traversed', 'scale']);
+          if (resultIndex === -1 || index < resultIndex) {
+            setClassName(['array-item', 'traversed', 'scale', 'shake']);
+          } else {
+            setClassName(['array-item', 'traversed', 'scale']);
+          }
         }
         if (
           modifiedArray.some(
@@ -41,11 +50,10 @@ const ArrayItem = ({
           updateLoadingStatus(`Element not found!`);
         }
       }
-    }, 700 * index);
+    }, 700 * (index + 1));
     return () => clearTimeout(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [modifiedArray]);
-
   return (
     <div className={ClassNames([...new Set(className)])}>
       <p>{array[index]}</p>
