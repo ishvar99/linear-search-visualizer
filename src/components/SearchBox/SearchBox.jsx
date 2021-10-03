@@ -3,7 +3,7 @@ import './SearchBox.css';
 const SearchBox = ({ search, updateLoadingStatus, searchStatus }) => {
   const [value, setValue] = useState('');
   const searchElement = (e) => {
-    if (e.key === 'Enter' || e === 'click') {
+    if (e === 'click') {
       if (value.trim() !== '') {
         updateLoadingStatus('loading...');
         search(parseInt(value));
