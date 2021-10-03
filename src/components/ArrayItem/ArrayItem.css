@@ -1,12 +1,12 @@
 .array-item {
-  height: 100px;
-  width: 80px;
-  background-color: royalblue;
+  height: 90px;
+  width: 70px;
+  background-color: blue;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 5px;
-  margin: 25px;
+  border-radius: 10px;
+  margin: 30px;
 }
 
 .array-item p {
